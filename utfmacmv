@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Encode qw/decode_utf8 encode_utf8/;
+use Unicode::Normalize;
+
+# TODO: add a noclobber option
+
+
+while (my $filename=shift(@ARGV)) {
+    my $newname = encode_utf8( NFC(decode_utf8 $filename) );
+	if ($filename eq $newname) {
+		print "same name $filename\n";
+	} else {
+		rename($filename, $newname) or warn "error renaming $filename\n";
+	}
+}
+
