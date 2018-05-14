@@ -18,7 +18,8 @@ Will reencode the filename and let the data untouched (hopefully). Treats all pa
 
 ## Options
 
-None. 
+	-h, --help		Online help
+	-n, --noclobber 	Don't overwrite existing files.
 
 ## To do
 
