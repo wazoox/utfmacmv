@@ -26,7 +26,7 @@ unless (
 while ( my $filename = shift(@ARGV) ) {
     my $newname = encode_utf8( NFC( decode_utf8 $filename) );
     if ( $filename eq $newname ) {
-        print "Same target name $filename\n";
+        print "Same target name $filename\n" if $verbose;
 		next;
     } else {
         if ( $noclobber and -f $newname ) {
