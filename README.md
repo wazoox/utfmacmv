@@ -22,8 +22,7 @@ None.
 
 ## To do
 
-Should add a "noclobber" option.
-May add a "recursive" option.
+A "recursive" option would be nice.
 
 ## License
 
